@@ -1,0 +1,74 @@
+:root,
+.bgp0,
+.bgp1,
+.bgp2,
+.bgp3,
+.bgp4,
+.bgp5 {
+    --bgp_0:#2d2d2d;
+    --bgp_1:#4d4d4d;
+    --bgp_2:#e8e8e8;
+    --bgp_3:#ffffff;
+}
+
+.photo img {
+    content:url("style/palettes/photo_dmg.png");
+}
+
+@media screen, weasy {
+    .bgp1 {
+        --bgp_1:#0a8cff;
+        --bgp_2:#c9e6ff;
+    }
+
+    .bgp2 {
+        --bgp_1:#fb4485;
+        --bgp_2:#ffcfe0;
+    }
+
+    .bgp3 {
+        --bgp_1:#fda639;
+        --bgp_2:#ffdeb4;
+    }
+
+    .bgp4 {
+        --bgp_1:#3c9965;
+    }
+
+    .bgp5 {
+        --bgp_1:#343533;
+    }
+
+    .groseille img {
+        content:url("groseille_button_color.png");
+        image-rendering: crisp-edges;
+    }
+}
+
+@media print {
+    .groseille img {
+        content:url("groseille_button_grey.png");
+        image-rendering: crisp-edges;
+    }
+}
+
+@media screen {
+    @media (max-aspect-ratio:9/10) {
+        .bgp1 {
+            --bgp_3:#e0f0ff;
+        }
+
+        .bgp2 {
+            --bgp_3:#ffe9f1;
+        }
+
+        .bgp3 {
+            --bgp_3:#fff0de;
+        }
+
+        .bgp4 {
+            --bgp_2:#dbeee0;
+        }
+
+    }
+}

@@ -1,0 +1,16 @@
+:root, bgp0, bgp1, bgp2, bgp3, bgp4 {
+    --bgp_0:#1f1f1f;
+    --bgp_1:#50563f;
+    --bgp_2:#9fab7d;
+    --bgp_3:#e0eac8;
+}
+
+.photo {
+    content: url(photo_gbp.png);
+    image-rendering: crisp-edges;
+}
+
+.groseille img {
+    content: url("groseille_button_gbp.png");
+    image-rendering: crisp-edges;
+}

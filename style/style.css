@@ -1,0 +1,479 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+html {
+    margin:0;
+    height:100%;
+    background-color:var(--bgp_0);
+}
+
+body {
+    margin:0;
+    min-height:100%;
+}
+
+main {
+    font-family: Montserrat;
+    color:var(--bgp_0);
+    max-width:1000px;
+    margin:auto;
+    min-height:100%;
+    display:flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top:10px;
+    margin-bottom:15px;
+}
+
+a {
+    color:var(--bgp_0);
+}
+
+a:hover {
+    color:var(--bgp_1);
+}
+
+#header {
+    display: flex;
+    background-color:var(--bgp_1);
+    color:var(--bgp_3);
+}
+
+#text-header {
+    padding:20px 30px 20px 25px;
+}
+
+#text-header h1 {
+    font-size: 65px;
+    line-height: .9em;
+    font-weight: normal;    
+    padding-top:10px;    
+    padding-bottom:10px;
+    margin:0px;
+}
+
+#text-header h3 {
+    font-size:19.5px;
+    font-weight: normal;
+    margin:0px;
+}
+
+.first-name {
+    font-weight: lighter;
+}
+
+.last-name {
+    font-weight: normal;
+}
+
+#photo-header {
+    min-width: 237px;
+    min-height: 144px;
+    background-color:var(--bgp_1);
+}
+
+.photo {
+    display: block;
+    width: 121px;
+    height: 144px;
+    margin-left: auto;
+}
+
+.photo img {
+    border: none;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    font-size: 16px;
+}
+
+.content h3 {
+    margin:0;
+}
+
+
+#left-panel {
+    background-color:var(--bgp_2);
+    padding:20px 10px 10px 10px;
+    flex-basis: 217px;
+    font-size: 13px;
+}
+
+#left-panel > * {
+    padding-left: 0px;
+    padding-bottom:20px; 
+}
+
+#left-panel h3 {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#left-panel ul {
+    margin: 0;
+    padding: 0 0 0 25px;
+    list-style-type: circle;
+}
+
+#main-panel {
+    flex-basis: 0;
+    flex-shrink: 1;
+    flex-grow: 1;
+    background-color:var(--bgp_3);
+    padding: 30px;
+}
+
+#main-panel span.first-letters {
+    color:var(--bgp_1);
+}
+
+.experiences-list {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-item {
+    margin-bottom: 10px;
+}
+
+.experience-item>ul {
+    display: grid;
+    grid-template-columns: 85px auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "period title subtitle"
+        "location description description";
+    list-style: none;
+    padding: 0;
+}
+
+.experience-item .title {
+    grid-area: title;
+    color:var(--bgp_0);
+}
+
+.experience-item .title h3 { 
+    margin: 0 10px 0 10px;
+    font-size: initial;
+}
+
+.experience-item .subtitle {
+    grid-area: subtitle;
+    color:var(--bgp_1);
+    align-self: center;
+}
+
+.experience-item .subtitle h4 { 
+    margin: 0;
+    font-weight: normal;
+    font-size:12px;
+    text-align: right;
+}
+
+.experience-item .location {
+    grid-area: location;
+    color:var(--bgp_1);
+    font-size:12px;
+    text-align: end;
+}
+
+.experience-item .period {
+    grid-area: period;
+    color:var(--bgp_1);
+    font-size:12px;
+    align-self: center;
+    text-align: end;
+}
+
+.experience-item .description {
+    grid-area: description;
+    text-align: justify;
+}
+
+.experience-item .description p {
+    margin: 0 0px 0 10px;
+}
+
+.hobbies-list {
+    padding: 0px;
+    list-style:none;
+    background-color:var(--bgp_2);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1px;
+    margin-bottom: 10px;
+}
+
+.hobby-item {
+    padding: 5px;
+    background-color:var(--bgp_3);
+}
+
+.hobby-item h3 {
+    text-align: center;    
+}
+
+.hobby-item p {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.groseille {
+    display: grid;
+    
+    width: 64px;
+    height: 64px;
+    
+    grid-template-columns: 64px;
+    grid-template-rows: 64px;
+    grid-template-areas: 
+        "button";
+    
+    margin: auto;
+    margin-top:5px;
+}
+
+.groseille-button {
+    grid-area: button;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    cursor: crosshair;
+}
+
+.groseille img {
+    grid-area: button;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen {
+    @media (max-aspect-ratio:9/10) {
+        #header {
+            flex-direction: column;
+        }
+
+        #photo-header {
+            height: 144px;
+            padding-top:20px;
+        }
+
+        .photo {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #text-header {
+            text-align: center;
+        }
+
+        #content {
+            max-width: 100%;
+            flex-direction: column;
+        }
+
+        #left-panel {
+            max-width: 100%;
+            padding:20px 20px 0px 20px;
+            flex-basis: unset;
+            text-align: center; 
+            font-size: unset;      
+        }
+
+        #left-panel span.first-letters {
+            color:var(--bgp_1);
+        }
+        
+        #left-panel ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        #left-panel h3 {
+            margin-left: 0;
+        }
+        
+        #main-panel {
+            max-width: 100%;
+            flex-shrink: 1;
+            flex-basis: unset;
+            text-align: center;
+            padding:0;
+        }
+        
+        #main-panel>* {
+            padding: 20px;
+            padding-bottom:10px;
+            background-color:var(--bgp_3);
+        }
+        
+        #main-panel .experience-item {
+            margin-bottom: 0;
+            padding-bottom: 20px;
+        }
+        
+        #main-panel .experiences-list {
+            margin-bottom: 0;
+        }
+        
+        .experiences-list>li {
+            margin-bottom: 30px; 
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .experience-item>ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .experience-item .title {
+            text-align: center;
+        }
+
+        .experience-item .subtitle {
+            text-align: center;
+        }
+        
+        .experience-item .subtitle h4 {
+            font-size: 14px;
+        }
+
+        .experience-item .location {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .experience-item .period {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .experience-item .description {
+            text-align: justify;
+        }
+        
+        .experience-item .description p {
+            margin:0;
+        }
+
+        .hobbies-list {
+            background-color: unset;
+            grid-template-columns: auto;
+            gap:0px;
+            margin:auto;
+            max-width: 300px;
+        }    
+        
+        .hobby-item {
+            background-color:unset;
+        }
+
+        .groseille {
+            margin-bottom:10px; 
+        }
+    }
+}
+
+@media print, weasy {
+    @page {
+        size:A4;
+        margin:0;
+    }
+     
+    html, body, main {
+        width:210mm;
+        height:297mm;
+    }
+
+    h2 {
+        margin-top:5px;
+        margin-bottom:12px;
+    }
+    
+    .content {
+        font-size: 13px;
+    }
+    
+    #left-panel {
+        font-size: 12px;
+        padding:15px 10px 10px 10px;
+    }
+    
+    #left-panel > * {
+        padding-left: 0px;
+    }
+
+    #left-panel h3 {
+        padding-left: 5px;
+    }
+
+    #main-panel {
+        padding: 20px;
+    }
+    
+    .hobby-item p {
+        font-size:12px
+    }
+}
+
+@media weasy {
+    #header {
+        display: grid;
+        grid-template-columns: 224px auto;
+    }
+    
+    #photo-header {
+        min-width: 224px;
+    }
+    
+    #content {
+        display: grid;
+        grid-template-columns: 225px auto;
+        grid-template-rows: auto;
+        font-size: 13.8px;
+    }
+    
+    #main-panel {
+        min-height: 100%;
+        max-height: 100%;
+    }
+
+    #left-panel {
+        min-height: 100%;
+    }    
+    
+    /* #region hacks to avoid color bleed between divs */
+    #header-text {
+        margin-left: -1px;
+    }
+    
+    .hobbies-list {
+        grid-gap: 3px;
+    }
+
+    .hobby-item {
+        margin: -1px;
+    }
+
+    #main-panel {
+        margin-left:-1px;
+    }
+
+    /* #endregion */
+}
+
