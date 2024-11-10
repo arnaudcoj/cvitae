@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+
 html {
     margin:0;
     height:100%;
@@ -16,8 +21,9 @@ main {
     flex-grow:1;
     flex-direction:column;
 
-    background-color:#e0f8d0;
-    color:#081820;
+    font-family: Montserrat;
+    background-color:var(--bgp_3);
+    color:var(--bgp_0);
 }
 
 ul {
@@ -25,8 +31,8 @@ ul {
 }
 
 .header {
-    background-color:#346856;
-    color:#e0f8d0;
+    background-color:var(--bgp_1);
+    color:var(--bgp_3);
     padding:5px;
 }
 
@@ -34,7 +40,7 @@ ul {
     display:flex;
     flex-direction: row;
     flex-grow: 1;
-    font-size:12px;
+    font-size: 16px;
 }
 
 .content h3 {
@@ -47,12 +53,42 @@ ul {
 
 .left-panel {
     flex-shrink:0;
-    background-color:#88c070;
+    background-color:var(--bgp_2);
     padding:10px;
+    font-size: 14px;
+}
+
+.left-panel > * {
+    padding-left: 0px;
+}
+
+.left-panel h3 {
+    padding-left: 10px;
+}
+
+.left-panel ul {
+    padding-left: 30px;
+    list-style: none;
 }
 
 .main-panel {
     padding:10px;
+}
+
+.experience-section {
+    padding-left: 10px;
+}
+
+.experience-section > * {
+    padding-left: 20px;
+}
+
+.experience-section h3 {
+    padding-left: 0px;
+}
+
+span.first-letters {
+    color:var(--bgp_1);
 }
 
 @media print {
@@ -68,11 +104,13 @@ ul {
 
     .content {
         height:85%;
+        font-size:14px;
     }
     
     .left-panel {
         /* width:25%; */
         height:100%;
+        font-size:12px;
     }
 
     .main-panel {

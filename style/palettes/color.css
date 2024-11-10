@@ -1,0 +1,22 @@
+:root, .bgp0, .bgp1, .bgp2, .bgp3, .bgp4 {
+    --bgp_0:#2d2d2d;
+    --bgp_1:#4d4d4d;
+    --bgp_2:#e8e8e8;
+    --bgp_3:#ffffff;
+}
+
+.bgp1 {
+    --bgp_1:#6ce0f1;
+}
+
+.bgp2 {
+    --bgp_1:#fb4485; 
+}
+
+.bgp3 {
+    --bgp_1:#fda639;
+}
+
+.bgp4 {
+    --bpg_1:#c2e15f;
+}
