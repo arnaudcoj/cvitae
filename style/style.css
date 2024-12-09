@@ -6,24 +6,20 @@
 html {
     margin:0;
     height:100%;
+    background-color:var(--bgp_0);
 }
 
 body {
     margin:0;
     min-height:100%;
-
-    display:flex;
-    flex-direction:column;
 }
 
-main {
-    display:flex;
-    flex-grow:1;
-    flex-direction:column;
-
+main {;
     font-family: Montserrat;
-    background-color:var(--bgp_3);
     color:var(--bgp_0);
+    min-height:100%;
+    display: grid;
+    grid-template-rows:max-content auto;
 }
 
 ul {
@@ -37,10 +33,9 @@ ul {
 }
 
 .content {
-    display:flex;
-    flex-direction: row;
-    flex-grow: 1;
     font-size: 16px;
+    display: grid;
+    grid-template-columns: max-content auto;
 }
 
 .content h3 {
@@ -52,7 +47,6 @@ ul {
 }
 
 .left-panel {
-    flex-shrink:0;
     background-color:var(--bgp_2);
     padding:10px;
     font-size: 14px;
@@ -72,6 +66,7 @@ ul {
 }
 
 .main-panel {
+    background-color:var(--bgp_3);
     padding:10px;
 }
 
@@ -83,8 +78,44 @@ ul {
     padding-left: 20px;
 }
 
-.experience-section h3 {
-    padding-left: 0px;
+.experiences-list {
+    list-style: none;
+}
+
+.experiences-list ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 34% 33% 33%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "title location period"
+        "description description description";
+  
+}
+
+.experiences-list ul li {
+}
+
+.experiences-list ul li h3 {
+}
+
+.experiences-list .title {
+    grid-area: title;
+}
+
+.experiences-list .location {
+    grid-area: location;
+    color:var(--bgp_1);
+}
+
+.experiences-list .period {
+    grid-area: period;
+    color:var(--bgp_1);
+}
+
+.experiences-list .description {
+    grid-area: description;
+    padding-left:30px;
 }
 
 span.first-letters {
@@ -101,20 +132,22 @@ span.first-letters {
         width:210mm;
         height:297mm;
     }
+    
+    main {
+        /* max-content not supported atm by weasyprintpdf... */
+        grid-template-rows:13.3% auto;
+    }
 
     .content {
-        height:85%;
-        font-size:14px;
+        font-size:14px;    
+        grid-template-columns: 28.6% auto;
     }
     
     .left-panel {
-        /* width:25%; */
-        height:100%;
         font-size:12px;
     }
-
-    .main-panel {
-        /* width:75%; */
-        height:100%;
+   
+    .experiences-list .description {
+        display:none;
     }
 }
