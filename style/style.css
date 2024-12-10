@@ -19,7 +19,7 @@ main {;
     color:var(--bgp_0);
     min-height:100%;
     display: grid;
-    grid-template-rows:max-content auto;
+    grid-template-rows:min-content auto;
 }
 
 ul {
@@ -85,12 +85,11 @@ ul {
 .experiences-list ul {
     list-style: none;
     display: grid;
-    grid-template-columns: 34% 33% 33%;
+    grid-template-columns: 80px auto 100px;
     grid-template-rows: auto;
     grid-template-areas: 
-        "title location period"
-        "description description description";
-  
+        "period title location"
+        "none description other";
 }
 
 .experiences-list ul li {
@@ -101,21 +100,30 @@ ul {
 
 .experiences-list .title {
     grid-area: title;
+    align-self: center;
 }
 
 .experiences-list .location {
     grid-area: location;
     color:var(--bgp_1);
+    font-size:12px;
+    align-self: center;
+    text-align: end;
 }
 
 .experiences-list .period {
     grid-area: period;
     color:var(--bgp_1);
+    font-size:14px;
+    align-self: center;
+    text-align: start;
 }
 
 .experiences-list .description {
     grid-area: description;
-    padding-left:30px;
+    padding-bottom: 10px;
+    text-align: justify;
+        
 }
 
 span.first-letters {
@@ -147,6 +155,12 @@ span.first-letters {
         font-size:12px;
     }
    
+.experiences-list ul {
+    grid-template-columns: 70px auto 100px;
+    }
+.experiences-list .period {
+    font-size:12px;
+}
     .experiences-list .description {
         display:none;
     }
