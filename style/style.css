@@ -133,31 +133,23 @@ span.first-letters {
     color:var(--bgp_1);
 }
 
-@media print {
+@media print, weasy {
     @page {
         size:A4;
         margin:0;
     }
-
+     
     html, body, main {
         width:210mm;
         height:297mm;
     }
     
     main {
-        /* max-content not supported atm by weasyprintpdf... */
         grid-template-rows:12% 88%;
     }
-
-    .content {
-        font-size:14px;    
-        /* max-content not supported atm by weasyprintpdf... */        
-        grid-template-columns: 28.6% 71.4%;
-    }
     
-    .main-panel { /* Weasyprint /shrug */
-        overflow:scroll;
-        max-height: 100%;
+    .content {
+        font-size:14px;
     }
     
     .left-panel {
@@ -166,6 +158,18 @@ span.first-letters {
     
     .experience-item .period {
         font-size:12px;
+    }
+    
+}
+
+@media weasy {
+    .content {
+        /* max-content not supported atm by weasyprintpdf... */        
+        grid-template-columns: 28.6% 71.4%;
+    }
+    .main-panel { /* Weasyprint /shrug */
+        overflow:scroll;
+        max-height: 100%;
     }
     
     .experience-item .description {
