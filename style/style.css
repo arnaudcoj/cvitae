@@ -17,13 +17,15 @@ body {
 main {;
     font-family: Montserrat;
     color:var(--bgp_0);
+    max-width:1000px;
+    margin:auto;
     min-height:100%;
     display: grid;
     grid-template-rows:min-content auto;
 }
 
-ul {
-    padding-left:10px;
+h2 {
+    margin-top:10px
 }
 
 .header {
@@ -46,10 +48,18 @@ ul {
     margin:0;
 }
 
+a {
+    color:var(--bgp_0);
+}
+
+a:hover {
+    color:var(--bgp_1);
+}
+
 .left-panel {
     background-color:var(--bgp_2);
     padding:10px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .left-panel > * {
@@ -67,63 +77,56 @@ ul {
 
 .main-panel {
     background-color:var(--bgp_3);
-    padding:10px;
-}
-
-.experience-section {
-    padding-left: 10px;
-}
-
-.experience-section > * {
-    padding-left: 20px;
+    padding: 30px;
 }
 
 .experiences-list {
     list-style: none;
+    padding: 0;
 }
 
-.experiences-list ul {
+.experience-item>ul {
     list-style: none;
     display: grid;
-    grid-template-columns: 80px auto 100px;
+    grid-template-columns: 100px auto;
     grid-template-rows: auto;
     grid-template-areas: 
-        "period title location"
-        "none description other";
+        "period title"
+        "location description ";
+    padding: 0;
 }
 
-.experiences-list ul li {
-}
-
-.experiences-list ul li h3 {
-}
-
-.experiences-list .title {
+.experience-item .title {
     grid-area: title;
-    align-self: center;
 }
 
-.experiences-list .location {
+.experience-item .location {
     grid-area: location;
     color:var(--bgp_1);
     font-size:12px;
-    align-self: center;
+    padding-right: 10px;
     text-align: end;
 }
 
-.experiences-list .period {
+.experience-item .period {
     grid-area: period;
     color:var(--bgp_1);
     font-size:14px;
     align-self: center;
-    text-align: start;
+    text-align: end;
+    padding-right: 10px;
 }
 
-.experiences-list .description {
+.experience-item .description {
     grid-area: description;
     padding-bottom: 10px;
     text-align: justify;
-        
+}
+
+.side-projects .description {
+    grid-area: description;
+    padding-bottom: 10px;
+    text-align: justify;
 }
 
 span.first-letters {
@@ -143,25 +146,29 @@ span.first-letters {
     
     main {
         /* max-content not supported atm by weasyprintpdf... */
-        grid-template-rows:13.3% auto;
+        grid-template-rows:12% 88%;
     }
 
     .content {
         font-size:14px;    
-        grid-template-columns: 28.6% auto;
+        /* max-content not supported atm by weasyprintpdf... */        
+        grid-template-columns: 28.6% 71.4%;
+    }
+    
+    .main-panel { /* Weasyprint /shrug */
+        overflow:scroll;
+        max-height: 100%;
     }
     
     .left-panel {
         font-size:12px;
     }
-   
-.experiences-list ul {
-    grid-template-columns: 70px auto 100px;
+    
+    .experience-item .period {
+        font-size:12px;
     }
-.experiences-list .period {
-    font-size:12px;
-}
-    .experiences-list .description {
-        display:none;
+    
+    .experience-item .description {
+        /*display:none;*/
     }
 }
