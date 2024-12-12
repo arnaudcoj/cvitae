@@ -7,16 +7,20 @@
 
 .bgp1 {
     --bgp_1:#0a8cff;
+    --bgp_2:#c9e6ff;
 }
 
 .bgp2 {
-    --bgp_1:#fb4485; 
+    --bgp_1:#fb4485;
+    --bgp_2:#ffcfe0;
 }
 
 .bgp3 {
     --bgp_1:#fda639;
+    --bgp_2:#ffdeb4;
 }
 
 .bgp4 {
     --bgp_1:#00a229;
+    --bgp_2:#d0ead7;
 }

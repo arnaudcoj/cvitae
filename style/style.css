@@ -25,7 +25,8 @@ main {;
 }
 
 h2 {
-    margin-top:10px
+    margin-top:10px;
+    margin-bottom:15px;
 }
 
 .header {
@@ -98,6 +99,25 @@ a:hover {
 
 .experience-item .title {
     grid-area: title;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.experience-item .title h3 {
+    display: inline;
+    padding-right: 10px;
+    color:var(--bgp_0);
+    font-size: initial;
+}
+
+.experience-item .title h4 {
+    display: inline;
+    color:var(--bgp_1);
+    font-weight: normal;
+    font-size:12px;
+    margin: 0px;
+    align-self: center;
+    text-align: right;
 }
 
 .experience-item .location {
@@ -111,7 +131,7 @@ a:hover {
 .experience-item .period {
     grid-area: period;
     color:var(--bgp_1);
-    font-size:14px;
+    font-size:12px;
     align-self: center;
     text-align: end;
     padding-right: 10px;
@@ -123,10 +143,28 @@ a:hover {
     text-align: justify;
 }
 
-.side-projects .description {
-    grid-area: description;
-    padding-bottom: 10px;
-    text-align: justify;
+.hobbies-list {
+    padding: 0px;
+    display: grid;   
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1px;
+    list-style:none;
+    background-color:var(--bgp_2);
+}
+
+.hobby-item {
+    padding: 5px;
+    background-color:var(--bgp_3);
+}
+
+.hobby-item h3 {
+    text-align: center;    
+}
+
+.hobby-item p {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 span.first-letters {
@@ -147,32 +185,50 @@ span.first-letters {
     main {
         grid-template-rows:12% 88%;
     }
+ 
+
+    h2 {
+        margin-top:5px;
+        margin-bottom:12px;
+    }
     
     .content {
         font-size:14px;
+    }
+    
+    .left-panel > * {
+        padding-left: 0px;
+    }
+
+    .left-panel h3 {
+        padding-left: 5px;
+    }
+
+    .left-panel ul {
+        padding-left: 15px;
+        list-style: none;
     }
     
     .left-panel {
         font-size:12px;
     }
     
-    .experience-item .period {
-        font-size:12px;
+    .main-panel {
+        padding: 20px;
     }
     
+    .hobby-item p {
+        font-size:12px
+    }
 }
 
 @media weasy {
     .content {
         /* max-content not supported atm by weasyprintpdf... */        
-        grid-template-columns: 28.6% 71.4%;
+        grid-template-columns: 27% 73%;
     }
     .main-panel { /* Weasyprint /shrug */
         overflow:scroll;
         max-height: 100%;
-    }
-    
-    .experience-item .description {
-        /*display:none;*/
     }
 }
