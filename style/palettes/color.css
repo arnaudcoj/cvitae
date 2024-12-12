@@ -1,4 +1,10 @@
-:root, .bgp0, .bgp1, .bgp2, .bgp3, .bgp4 {
+:root,
+.bgp0,
+.bgp1,
+.bgp2,
+.bgp3,
+.bgp4,
+.bgp5 {
     --bgp_0:#2d2d2d;
     --bgp_1:#4d4d4d;
     --bgp_2:#e8e8e8;
@@ -23,4 +29,16 @@
 .bgp4 {
     --bgp_1:#00a229;
     --bgp_2:#d0ead7;
+}
+
+.bgp5 {
+    --bgp_0: #151515;
+    --bgp_1: #866d52;
+    --bgp_2: #d7c580;
+    --bgp_3: #ffffff;
+}
+
+.groseille-button {
+    background: url("groseille_button_color.png") no-repeat;
+    background-size: contain;
 }
