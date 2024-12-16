@@ -7,6 +7,7 @@
 
 .photo {
     background: url(photo_sgb.png) no-repeat;
+    image-rendering: crisp-edges;
     background-size:contain;
     background-position: right;
 }

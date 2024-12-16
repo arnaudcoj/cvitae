@@ -23,7 +23,7 @@ main {
     
     display: grid;
     grid-template-columns: max-content auto;
-    grid-template-rows:160px auto;
+    grid-template-rows:144px auto;
     grid-template-areas:
         "photo header"
         "left content";
@@ -42,16 +42,17 @@ main {
     grid-area: header;
     background-color:var(--bgp_1);
     color:var(--bgp_3);
-    padding:30px 30px 20px 30px;
+        padding:20px 30px 20px 25px;
 }
 
 #header h1 {
-    font-size: 70px;
+    font-size: 65px;
     font-weight: normal;
     margin:0px;
 }
 
 #header h3 {
+    font-size:19.5px;
     font-weight: normal;
     margin:0px;
 }
@@ -237,11 +238,6 @@ span.first-letters {
         height:297mm;
     }
 
-    main {
-        grid-template-rows:144px auto;
-    }
-
-
     h2 {
         margin-top:5px;
         margin-bottom:12px;
@@ -249,18 +245,6 @@ span.first-letters {
     
     .content {
         font-size:14px;
-    }
-
-    #header {    
-        padding:20px 30px 20px 25px;
-    }
-    
-    #header h1 {
-        font-size: 65px;
-    }
-    
-    #header h3 {
-        font-size:19.5px;
     }
     
     #left-panel > * {
