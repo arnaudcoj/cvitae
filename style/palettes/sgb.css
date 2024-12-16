@@ -5,6 +5,11 @@
     --bgp_3:#f7e7c6;
 }
 
+#photo {
+    background: url(photo_sgb.png) no-repeat;
+    background-size:contain;
+}
+
 .groseille-button {
     background: url("groseille_button_sgb.png") no-repeat;
     background-size: contain;

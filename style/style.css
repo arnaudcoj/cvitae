@@ -21,6 +21,7 @@ main {
     margin:auto;
     min-height:100%;
     display: grid;
+    grid-template-columns min-content auto;
     grid-template-rows:min-content auto;
 }
 
@@ -32,13 +33,35 @@ h2 {
 .header {
     background-color:var(--bgp_1);
     color:var(--bgp_3);
-    padding:5px;
+    display:grid;
+    grid-template-columns:236.6px auto;
+    grid-template-rows:auto auto;
+    grid-template-areas:
+        "photo name"
+        "photo job";
+}
+
+.header h1 {
+    margin:0px;
+    padding: 10px;
+}
+
+.header h3 {
+    margin:0px;
+    padding:10px;
+}
+
+#photo {
+    margin-left: auto;
+    grid-area: photo;
+    width: 121px;
+    height: 144px;
 }
 
 .content {
     font-size: 16px;
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns:236.6px auto;
 }
 
 .content h3 {
@@ -72,7 +95,7 @@ a:hover {
 }
 
 .left-panel ul {
-    padding-left: 30px;
+    padding-left: 25px;
     list-style: none;
 }
 
@@ -84,6 +107,10 @@ a:hover {
 .experiences-list {
     list-style: none;
     padding: 0;
+}
+
+.experience-item {
+    margin-bottom: 10px;
 }
 
 .experience-item>ul {
@@ -139,7 +166,6 @@ a:hover {
 
 .experience-item .description {
     grid-area: description;
-    padding-bottom: 10px;
     text-align: justify;
 }
 
@@ -195,7 +221,7 @@ span.first-letters {
     }
     
     main {
-        grid-template-rows:12% 88%;
+        grid-template-rows:144px auto;
     }
  
 
