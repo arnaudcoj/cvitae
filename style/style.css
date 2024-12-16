@@ -147,12 +147,13 @@ a:hover {
     padding: 0px;
     display: grid;   
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1px;
+    grid-gap: 3px;
     list-style:none;
     background-color:var(--bgp_2);
 }
 
 .hobby-item {
+    margin: -1px;
     padding: 5px;
     background-color:var(--bgp_3);
 }
@@ -177,6 +178,7 @@ a:hover {
     cursor: crosshair;
     image-rendering: crisp-edges;
 }
+
 span.first-letters {
     color:var(--bgp_1);
 }
@@ -241,4 +243,23 @@ span.first-letters {
         overflow:scroll;
         max-height: 100%;
     }
+
+    /* #region hacks to avoid color bleed between divs */
+    .hobbies-list {
+        grid-gap: 3px;
+    }
+
+    .hobby-item {
+        margin: -1px;
+    }
+
+    .main-panel {
+        margin-left:-1px; 
+    }
+
+    .left-panel {
+        padding-right:11px;
+    }    
+    /* #endregion */
 }
+
