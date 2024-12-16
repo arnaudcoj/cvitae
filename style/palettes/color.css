@@ -38,9 +38,10 @@
     --bgp_3: #ffffff;
 }
 
-#photo {
+.photo {
     background: url(photo.png) no-repeat;
     background-size:contain;
+    background-position: right;
 }
 
 .groseille-button {
