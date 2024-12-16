@@ -1,4 +1,4 @@
-const palettes = ['color', 'dmg', 'sgb'];
+const palettes = ['color', 'dmg', 'gbp', 'gbl', 'sgb'];
 
 window.onload = function() {
     const queryString = window.location.search;
