@@ -55,10 +55,11 @@
     }
 }
 
-.photo {
-    background-image:url("photo.png");
+.photo img {
+    content:url("style/palettes/photo_dmg.png");
 }
 
-.groseille-button {
-    background-image:url("groseille_button_color.png");
+.groseille img {
+    content:url("groseille_button_color.png");
+    image-rendering: crisp-edges;
 }

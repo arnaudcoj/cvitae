@@ -6,10 +6,11 @@
 }
 
 .photo {
-    background-image: url(photo_gbp.png);
+    content: url(photo_gbp.png);
     image-rendering: crisp-edges;
 }
 
-.groseille-button {
-    background-image: url("groseille_button_gbp.png");
+.groseille img {
+    content: url("groseille_button_gbp.png");
+    image-rendering: crisp-edges;
 }
