@@ -362,7 +362,7 @@ a:hover {
         }
 
         .experience-item .description {
-            text-align: justify;
+            text-align: left;
         }
         
         .experience-item .description p {
