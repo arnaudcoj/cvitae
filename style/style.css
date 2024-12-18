@@ -286,7 +286,7 @@ a:hover {
 
         #left-panel {
             max-width: 100%;
-            padding:20px 0px 0px 0px;
+            padding:20px 20px 0px 20px;
             flex-basis: unset;
             text-align: center; 
             font-size: unset;      
@@ -299,6 +299,7 @@ a:hover {
         
         #left-panel ul {
             padding-left: 0;
+            list-style: none;
         }
 
         #main-panel {
@@ -310,7 +311,8 @@ a:hover {
         }
         
         #main-panel>* {
-            padding-top:20px;
+            padding: 20px;
+            padding-bottom:10px;
             background-color:var(--bgp_3);
         }
         
@@ -361,6 +363,10 @@ a:hover {
 
         .experience-item .description {
             text-align: justify;
+        }
+        
+        .experience-item .description p {
+            margin:0;
         }
 
         .hobbies-list {
