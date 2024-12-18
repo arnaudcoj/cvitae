@@ -27,24 +27,38 @@
 }
 
 .bgp4 {
-    --bgp_1:#00a229;
-    --bgp_2:#d0ead7;
+    --bgp_1:#3c9965;
 }
 
 .bgp5 {
-    --bgp_0: #151515;
-    --bgp_1: #866d52;
-    --bgp_2: #d7c580;
-    --bgp_3: #ffffff;
+    --bgp_1:#343533;
+}
+
+@media screen {
+    @media (max-aspect-ratio:9/10) {
+        .bgp1 {
+            --bgp_3:#e0f0ff;
+        }
+
+        .bgp2 {
+            --bgp_3:#ffe9f1;
+        }
+
+        .bgp3 {
+            --bgp_3:#fff0de;
+        }
+
+        .bgp4 {
+            --bgp_2:#dbeee0;
+        }
+
+    }
 }
 
 .photo {
-    background: url(photo.png) no-repeat;
-    background-size:contain;
-    background-position: right;
+    background-image:url("photo.png");
 }
 
 .groseille-button {
-    background: url("groseille_button_color.png") no-repeat;
-    background-size: contain;
+    background-image:url("groseille_button_color.png");
 }

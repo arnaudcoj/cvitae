@@ -20,62 +20,9 @@ main {
     max-width:1000px;
     margin:auto;
     min-height:100%;
-    
-    display: grid;
-    grid-template-columns: max-content auto;
-    grid-template-rows:144px auto;
-    grid-template-areas:
-        "photo header"
-        "left content";
+    display:flex;
+    flex-direction: column;
 }
-
-#photo-header {
-    background-color:var(--bgp_1);
-    grid-area: photo;
-}
-
-.photo {
-    height: 100%;
-}
-
-#header {
-    grid-area: header;
-    background-color:var(--bgp_1);
-    color:var(--bgp_3);
-        padding:20px 30px 20px 25px;
-}
-
-#header h1 {
-    font-size: 65px;
-    font-weight: normal;
-    margin:0px;
-}
-
-#header h3 {
-    font-size:19.5px;
-    font-weight: normal;
-    margin:0px;
-}
-
-.first-name {
-    font-weight: lighter;
-}
-
-.last-name {
-}
-
-.content {
-    font-size: 16px;
-}
-
-.content h3 {
-    margin:0;
-}
-
-.content ul {
-    margin:0;
-}
-
 
 h2 {
     margin-top:10px;
@@ -90,10 +37,73 @@ a:hover {
     color:var(--bgp_1);
 }
 
+#header {
+    display: flex;
+    background-color:var(--bgp_1);
+    color:var(--bgp_3);
+}
+
+#text-header {
+    padding:20px 30px 20px 25px;
+}
+
+#text-header h1 {
+    font-size: 65px;
+    line-height: .9em;
+    font-weight: normal;    
+    padding-top:10px;    
+    padding-bottom:10px;
+    margin:0px;
+}
+
+#text-header h3 {
+    font-size:19.5px;
+    font-weight: normal;
+    margin:0px;
+}
+
+.first-name {
+    font-weight: lighter;
+}
+
+.last-name {
+    font-weight: normal;
+}
+
+#photo-header {
+    min-width: 237px;
+    min-height: 144px;
+    background-color:var(--bgp_1);
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: right;
+}
+
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    font-size: 16px;
+}
+
+.content h3 {
+    margin:0;
+}
+
+
 #left-panel {
-    grid-area: left;
     background-color:var(--bgp_2);
     padding:20px 10px 10px 10px;
+    flex-basis: 217px;
     font-size: 13px;
 }
 
@@ -102,29 +112,33 @@ a:hover {
     padding-bottom:20px; 
 }
 
-#left-panel h2 {
-    margin: 0px;
-}
-
 #left-panel h3 {
     margin-left: 10px;
     margin-top: 10px;
 }
 
 #left-panel ul {
-    padding-left: 25px;
-    list-style: none;
+    margin: 0;
+    padding: 0 0 0 25px;
+    list-style-type: circle;
 }
 
 #main-panel {
-    grid-area:content;
+    flex-basis: 0;
+    flex-shrink: 1;
+    flex-grow: 1;
     background-color:var(--bgp_3);
     padding: 30px;
+}
+
+#main-panel span.first-letters {
+    color:var(--bgp_1);
 }
 
 .experiences-list {
     list-style: none;
     padding: 0;
+    gap:100px;
 }
 
 .experience-item {
@@ -132,36 +146,36 @@ a:hover {
 }
 
 .experience-item>ul {
-    list-style: none;
     display: grid;
-    grid-template-columns: 100px auto;
-    grid-template-rows: auto;
+    grid-template-columns: 85px auto auto;
+    grid-template-rows: auto auto;
     grid-template-areas: 
-        "period title"
-        "location description ";
+        "period title subtitle"
+        "location description description";
+    list-style: none;
     padding: 0;
 }
 
 .experience-item .title {
     grid-area: title;
-    display: grid;
-    grid-template-columns: auto auto;
+    color:var(--bgp_0);
 }
 
-.experience-item .title h3 {
-    display: inline;
-    padding-right: 10px;
-    color:var(--bgp_0);
+.experience-item .title h3 { 
+    margin: 0 10px 0 10px;
     font-size: initial;
 }
 
-.experience-item .title h4 {
-    display: inline;
+.experience-item .subtitle {
+    grid-area: subtitle;
     color:var(--bgp_1);
+    align-self: center;
+}
+
+.experience-item .subtitle h4 { 
+    margin: 0;
     font-weight: normal;
     font-size:12px;
-    margin: 0px;
-    align-self: center;
     text-align: right;
 }
 
@@ -169,7 +183,6 @@ a:hover {
     grid-area: location;
     color:var(--bgp_1);
     font-size:12px;
-    padding-right: 10px;
     text-align: end;
 }
 
@@ -179,7 +192,6 @@ a:hover {
     font-size:12px;
     align-self: center;
     text-align: end;
-    padding-right: 10px;
 }
 
 .experience-item .description {
@@ -187,17 +199,21 @@ a:hover {
     text-align: justify;
 }
 
+.experience-item .description p {
+    margin: 0 0px 0 10px;
+}
+
 .hobbies-list {
     padding: 0px;
-    display: grid;   
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 3px;
     list-style:none;
     background-color:var(--bgp_2);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1px;
+    margin-bottom: 10px;
 }
 
 .hobby-item {
-    margin: -1px;
     padding: 5px;
     background-color:var(--bgp_3);
 }
@@ -220,11 +236,133 @@ a:hover {
     width: 64px;
     height: 64px;
     cursor: crosshair;
+    
+    background-color: transparent;
+    background-repeat:no-repeat;
+    background-size: contain;
     image-rendering: crisp-edges;
 }
 
-span.first-letters {
-    color:var(--bgp_1);
+@media screen {
+    @media (max-aspect-ratio:9/10) {
+        #header {
+            flex-direction: column;
+        }
+
+        #photo-header {
+            height: 144px;
+            padding-top:20px;
+        }
+
+        .photo {
+            background-size:contain;
+            background-position: center;
+        }
+
+        #text-header {
+            text-align: center;
+        }
+
+        #content {
+            max-width: 100%;
+            flex-direction: column;
+        }
+
+        #left-panel {
+            max-width: 100%;
+            padding:20px 0px 0px 0px;
+            flex-basis: unset;
+            text-align: center; 
+            font-size: unset;      
+        }
+
+
+        #left-panel span.first-letters {
+            color:var(--bgp_1);
+        }
+        
+        #left-panel ul {
+            padding-left: 0;
+        }
+
+        #main-panel {
+            max-width: 100%;
+            flex-shrink: 1;
+            flex-basis: unset;
+            text-align: center;
+            padding:0;
+        }
+        
+        #main-panel>* {
+            padding-top:20px;
+            background-color:var(--bgp_3);
+        }
+        
+        #main-panel .experience-item {
+            margin-bottom: 0;
+            padding-bottom: 20px;
+        }
+        
+        #main-panel .experiences-list {
+            margin-bottom: 0;
+        }
+        
+        .experiences-list>li {
+            margin-bottom: 30px; 
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .experience-item>ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .experience-item .title {
+            text-align: center;
+        }
+
+        .experience-item .subtitle {
+            text-align: center;
+        }
+        
+        .experience-item .subtitle h4 {
+            font-size: 14px;
+        }
+
+        .experience-item .location {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .experience-item .period {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .experience-item .description {
+            text-align: justify;
+        }
+
+        .hobbies-list {
+            background-color: unset;
+            grid-template-columns: auto;
+            gap:0px;
+            margin:auto;
+            max-width: 300px;
+        }    
+        
+        .hobby-item {
+            background-color:unset;
+        }
+
+        .groseille-button {
+            margin-bottom:10px; 
+        }
+    }
 }
 
 @media print, weasy {
@@ -244,7 +382,12 @@ span.first-letters {
     }
     
     .content {
-        font-size:14px;
+        font-size: 13px;
+    }
+    
+    #left-panel {
+        font-size: 12px;
+        padding:15px 10px 10px 10px;
     }
     
     #left-panel > * {
@@ -255,17 +398,8 @@ span.first-letters {
         padding-left: 5px;
     }
 
-    #left-panel ul {
-        padding-left: 15px;
-        list-style: none;
-    }
-    
-    #left-panel {
-        font-size:12px;
-    }
-    
     #main-panel {
-        padding: 25px;
+        padding: 20px;
     }
     
     .hobby-item p {
@@ -274,12 +408,36 @@ span.first-letters {
 }
 
 @media weasy {
-    #main-panel { /* Weasyprint /shrug */
-        overflow:scroll;
+    #header {
+        display: grid;
+        grid-template-columns: 224px auto;
+    }
+    
+    #photo-header {
+        min-width: 224px;
+    }
+    
+    #content {
+        display: grid;
+        grid-template-columns: 225px auto;
+        grid-template-rows: auto;
+        font-size: 13.8px;
+    }
+    
+    #main-panel {
+        min-height: 100%;
         max-height: 100%;
     }
 
+    #left-panel {
+        min-height: 100%;
+    }    
+    
     /* #region hacks to avoid color bleed between divs */
+    #header-text {
+        margin-left: -1px;
+    }
+    
     .hobbies-list {
         grid-gap: 3px;
     }
@@ -289,12 +447,9 @@ span.first-letters {
     }
 
     #main-panel {
-        margin-left:-1px; 
+        margin-left:-1px;
     }
 
-    #left-panel {
-        padding-right:11px;
-    }    
     /* #endregion */
 }
 
