@@ -139,7 +139,6 @@ a:hover {
 .experiences-list {
     list-style: none;
     padding: 0;
-    gap:100px;
 }
 
 .experience-item {
@@ -327,7 +326,7 @@ a:hover {
         
         .experiences-list>li {
             margin-bottom: 30px; 
-            max-width: 350px;
+            max-width: 300px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -362,7 +361,7 @@ a:hover {
         }
 
         .experience-item .description {
-            text-align: left;
+            text-align: justify;
         }
         
         .experience-item .description p {
