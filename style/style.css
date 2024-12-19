@@ -292,7 +292,6 @@ a:hover {
             font-size: unset;      
         }
 
-
         #left-panel span.first-letters {
             color:var(--bgp_1);
         }
@@ -301,6 +300,10 @@ a:hover {
             padding-left: 0;
         }
 
+        #left-panel h3 {
+            margin-left: 0;
+        }
+        
         #main-panel {
             max-width: 100%;
             flex-shrink: 1;
