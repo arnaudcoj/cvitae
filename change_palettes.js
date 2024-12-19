@@ -27,17 +27,13 @@ const onGroseilleClick = function () {
 document.querySelectorAll(".groseille-button").forEach(b => b.addEventListener("click", onGroseilleClick));
 
 const change_palette = function (palettes) {
-    console.log(palettes);
     const sheet = `style/palettes/${palettes}.css`;
 
     const cssId = "bgps";
     const cssIdCustom = "customBgps";
     const cssElement = document.getElementById(cssId);
 
-    console.log(cssElement?.href);
-
     if (!cssElement) {
-        console.log("new");
         var head  = document.getElementsByTagName('head')[0];
         var link  = document.createElement('link');
         link.id   = cssIdCustom;
