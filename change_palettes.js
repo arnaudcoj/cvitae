@@ -1,6 +1,6 @@
 const palettes = ['color', 'dmg', 'gbp', 'gbl', 'sgb'];
 
-window.onload = function() {
+window.addEventListener("load", function() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     let bgps = urlParams.get('bgps');
@@ -10,7 +10,7 @@ window.onload = function() {
     }
 
     change_palette(bgps)
-};
+});
 
 const onGroseilleClick = function () {
     const queryString = window.location.search;
