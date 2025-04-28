@@ -432,6 +432,11 @@ a:hover {
 }
 
 @media weasy {
+    main {
+        display:grid;
+        grid-template-rows: 144px auto;
+    }
+    
     #header {
         display: grid;
         grid-template-columns: 224px auto;
